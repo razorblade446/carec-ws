@@ -19,9 +19,7 @@ module.exports = exports = function(app, socketCallback) {
         });
 
         io.set('transports', [
-            'websocket', // 'disconnect' EVENT will work only with 'websocket'
-            'xhr-polling',
-            'jsonp-polling'
+            'websocket' // 'disconnect' EVENT will work only with 'websocket'
         ]);
 
         io.sockets.on('connection', onConnection);
